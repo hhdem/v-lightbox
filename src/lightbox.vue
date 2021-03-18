@@ -62,6 +62,11 @@
             cells: {
                 type: Number,
                 default: () => 5
+            },
+            
+            noclick: {
+                type: Boolen,
+                default: () => true
             }
         },
 
@@ -95,7 +100,7 @@
             },
 
             show(i) {
-
+                if (this.noclick) {return;}
                 if (i >= this.items.length) {
                     i = 0;
                 }
