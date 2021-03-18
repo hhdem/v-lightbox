@@ -170,6 +170,12 @@ __webpack_require__.r(__webpack_exports__);
       "default": function _default() {
         return 5;
       }
+    },
+    noclick: {
+      type: Boolean,
+      "default": function _default() {
+        return false;
+      }
     }
   },
   data: function data() {
@@ -203,6 +209,10 @@ __webpack_require__.r(__webpack_exports__);
     show: function show(i) {
       var _this2 = this;
 
+      if (this.noclick) {
+        return;
+      }
+	    
       if (i >= this.items.length) {
         i = 0;
       }
